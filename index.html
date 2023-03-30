@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="app.js"></script>
+    <title>Time Sheet Calculator</title>
+</head>
+
+<body>
+    <!-- HEADING -->
+    <h1 id="heading">Time Sheet Calculator</h1>
+
+    <!-- FORM -->
+    <form action="">
+        <!-- TABLE -->
+        <table>
+            <!-- TABLE HEAD -->
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Starting Time</th>
+                    <th>Ending Time</th>
+                    <th>Break Deduction
+                        <span id="questionMark">
+                            ?
+                        </span>
+                    </th>
+                    <th style="width: 70px">Total</th>
+                </tr>
+            </thead>
+            <!-- TABLE BODY -->
+            <tbody>
+                <!-- TABLE ROW FOR EACH DAY -->
+                <tr>
+                    <th class="day">Monday</th>
+                    <td class="setTimeContainer startTime">
+                        <input type="number" placeholder="0" class="setHour" min="0" max="12" value="8">&nbsp
+                        :&nbsp
+                        <input type="number" placeholder="00" class="setMin" min="0" max="60" value="00">&nbsp&nbsp
+                        <select>
+                            <option value="AM">AM</option>
+                            <option value="PM">PM</option>
+                        </select>
+
+                    </td>
+
+                    <td class="setTimeContainer endTime">
+                        <input type="number" placeholder="0" class="setHour" min="0" max="12" value="5">&nbsp
+                        :&nbsp
+                        <input type="number" placeholder="00" class="setMin" min="0" max="60" value="00">&nbsp&nbsp
+                        <select>
+                            <option value="PM">PM</option>
+                            <option value="AM">AM</option>
+                        </select>
+
+                    </td>
+
+                    <td class="breakDeduction">
+                        <input type="number" placeholder="0" class="setHour" min="0" max="12" value="2">
+                        &nbsp:&nbsp
+                        <input type="number" placeholder="00" class="setMin" min="0" max="60" value="00">
+
+
+                    </td>
+
+                    <td class="totalOfRow">7.00</td>
+
+                </tr>
+
+                <tr>
+                    <th class="day">Tuesday</th>
+                    <td class="setTimeContainer startTime">
+                        <input type="number" placeholder="0" class="setHour" min="0" max="12" value="8">&nbsp
+                        :&nbsp
+                        <input type="number" placeholder="00" class="setMin" min="0" max="60" value="00">&nbsp&nbsp
+                        <select>
+                            <option value="AM">AM</option>
+                            <option value="PM">PM</option>
+                        </select>
+
+                    </td>
+
+                    <td class="setTimeContainer endTime">
+                        <input type="number" placeholder="0" class="setHour" min="0" max="12" value="6">&nbsp
+                        :&nbsp
+                        <input type="number" placeholder="00" class="setMin" min="0" max="60" value="00">&nbsp&nbsp
+                        <select>
+                            <option value="PM">PM</option>
+                            <option value="AM">AM</option>
+                        </select>
+
+                    </td>
+
+                    <td class="breakDeduction">
+                        <input type="number" placeholder="0" class="setHour" min="0" max="12" value="4">
+                        &nbsp:&nbsp
+                        <input type="number" placeholder="00" class="setMin" min="0" max="60" value="00">
+
+
+                    </td>
+
+                    <td class="totalOfRow">6.00</td>
+
+                </tr>
+
+                <tr>
+                    <th class="day">Wednesday</th>
+                    <td class="setTimeContainer startTime">
+                        <input type="number" placeholder="0" class="setHour" min="0" max="12" value="8">&nbsp
+                        :&nbsp
+                        <input type="number" placeholder="00" class="setMin" min="0" max="60" value="00">&nbsp&nbsp
+                        <select>
+                            <option value="AM">AM</option>
+                            <option value="PM">PM</option>
+                        </select>
+
+                    </td>
+
+                    <td class="setTimeContainer endTime">
+                        <input type="number" placeholder="0" class="setHour" min="0" max="12" value="7">&nbsp
+                        :&nbsp
+                        <input type="number" placeholder="00" class="setMin" min="0" max="60" value="00">&nbsp&nbsp
+                        <select>
+                            <option value="PM">PM</option>
+                            <option value="AM">AM</option>
+                        </select>
+
+                    </td>
+
+                    <td class="breakDeduction">
+                        <input type="number" placeholder="0" class="setHour" min="0" max="12" value="5">
+                        &nbsp:&nbsp
+                        <input type="number" placeholder="00" class="setMin" min="0" max="60" value="00">
+
+
+                    </td>
+
+                    <td class="totalOfRow">6.00</td>
+
+                </tr>
+
+                <tr>
+                    <th class="day">Thursday</th>
+                    <td class="setTimeContainer startTime">
+                        <input type="number" placeholder="0" class="setHour" min="0" max="12" value="8">&nbsp
+                        :&nbsp
+                        <input type="number" placeholder="00" class="setMin" min="0" max="60" value="00">&nbsp&nbsp
+                        <select>
+                            <option value="AM">AM</option>
+                            <option value="PM">PM</option>
+                        </select>
+
+                    </td>
+
+                    <td class="setTimeContainer endTime">
+                        <input type="number" placeholder="0" class="setHour" min="0" max="12" value="8">&nbsp
+                        :&nbsp
+                        <input type="number" placeholder="00" class="setMin" min="0" max="60" value="00">&nbsp&nbsp
+                        <select>
+                            <option value="PM">PM</option>
+                            <option value="AM">AM</option>
+                        </select>
+
+                    </td>
+
+                    <td class="breakDeduction">
+                        <input type="number" placeholder="0" class="setHour" min="0" max="12" value="1">
+                        &nbsp:&nbsp
+                        <input type="number" placeholder="00" class="setMin" min="0" max="60" value="00">
+
+
+                    </td>
+
+                    <td class="totalOfRow">11.00</td>
+
+                </tr>
+
+                <tr>
+                    <th class="day">Friday</th>
+                    <td class="setTimeContainer startTime">
+                        <input type="number" placeholder="0" class="setHour" min="0" max="12" value="8">&nbsp
+                        :&nbsp
+                        <input type="number" placeholder="00" class="setMin" min="0" max="60" value="00">&nbsp&nbsp
+                        <select>
+                            <option value="AM">AM</option>
+                            <option value="PM">PM</option>
+                        </select>
+
+                    </td>
+
+                    <td class="setTimeContainer endTime">
+                        <input type="number" placeholder="0" class="setHour" min="0" max="12" value="9">&nbsp
+                        :&nbsp
+                        <input type="number" placeholder="00" class="setMin" min="0" max="60" value="00">&nbsp&nbsp
+                        <select>
+                            <option value="PM">PM</option>
+                            <option value="AM">AM</option>
+                        </select>
+
+                    </td>
+
+                    <td class="breakDeduction">
+                        <input type="number" placeholder="0" class="setHour" min="0" max="12" value="2">
+                        &nbsp:&nbsp
+                        <input type="number" placeholder="00" class="setMin" min="0" max="60" value="00">
+
+
+                    </td>
+
+                    <td class="totalOfRow">11.00</td>
+
+                </tr>
+
+                <tr>
+                    <th class="day">Saturday</th>
+                    <td class="setTimeContainer startTime">
+                        <input type="number" placeholder="0" class="setHour" min="0" max="12" value="8">&nbsp
+                        :&nbsp
+                        <input type="number" placeholder="00" class="setMin" min="0" max="60" value="00">&nbsp&nbsp
+                        <select>
+                            <option value="AM">AM</option>
+                            <option value="PM">PM</option>
+                        </select>
+
+                    </td>
+
+                    <td class="setTimeContainer endTime">
+                        <input type="number" placeholder="0" class="setHour" min="0" max="12" value="10">&nbsp
+                        :&nbsp
+                        <input type="number" placeholder="00" class="setMin" min="0" max="60" value="00">&nbsp&nbsp
+                        <select>
+                            <option value="PM">PM</option>
+                            <option value="AM">AM</option>
+                        </select>
+
+                    </td>
+
+                    <td class="breakDeduction">
+                        <input type="number" placeholder="0" class="setHour" min="0" max="12" value="3">
+                        &nbsp:&nbsp
+                        <input type="number" placeholder="00" class="setMin" min="0" max="60" value="00">
+
+
+                    </td>
+
+                    <td class="totalOfRow">11.00</td>
+
+                </tr>
+
+                <tr>
+                    <th class="day">Sunday</th>
+                    <td class="setTimeContainer startTime">
+                        <input type="number" placeholder="0" class="setHour" min="0" max="12" value="8">&nbsp
+                        :&nbsp
+                        <input type="number" placeholder="00" class="setMin" min="0" max="60" value="00">&nbsp&nbsp
+                        <select>
+                            <option value="AM">AM</option>
+                            <option value="PM">PM</option>
+                        </select>
+
+                    </td>
+
+                    <td class="setTimeContainer endTime">
+                        <input type="number" placeholder="0" class="setHour" min="0" max="12" value="11">&nbsp
+                        :&nbsp
+                        <input type="number" placeholder="00" class="setMin" min="0" max="60" value="00">&nbsp&nbsp
+                        <select>
+                            <option value="PM">PM</option>
+                            <option value="AM">AM</option>
+                        </select>
+
+                    </td>
+
+                    <td class="breakDeduction">
+                        <input type="number" placeholder="0" class="setHour" min="0" max="12" value="4">
+                        &nbsp:&nbsp
+                        <input type="number" placeholder="00" class="setMin" min="0" max="60" value="00">
+
+
+                    </td>
+
+                    <td class="totalOfRow">11.00</td>
+
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td id="CodeBeautify" colspan="3">CodeBeautify</td>
+                    <td id="totalHoursContainer" colspan="2">Total Hours: <span id="totalHours">63.00</span></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <!-- BUTTONS TO PERFORM THE FUNCTIONS -->
+        <button onclick="clickCalculate(event)" id="calculate"><i class="fa fa-calculator"></i> CALCULATE</button>
+        <button onclick="
+        clickClearAll(event)" id="clearAll"><i class="fa fa-times-circle"></i> CLEAR ALL</button>
+
+
+    </form>
+
+
+</body>
+
+</html>
